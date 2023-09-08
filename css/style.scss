@@ -16,7 +16,7 @@ body {
   color: var(--white);
 }
 
-main.container {
+.container {
   width: 92%;
   margin: 0 15px;
   max-width: 1214px;
@@ -50,4 +50,9 @@ section {
       }
     }
   }
+}
+
+// テーブル(順位表)
+.table {
+  border: solid 1px var(--glay);
 }

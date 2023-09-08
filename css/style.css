@@ -14,7 +14,7 @@ body {
   color: var(--white);
 }
 
-main.container {
+.container {
   width: 92%;
   margin: 0 15px;
   max-width: 1214px;
@@ -54,4 +54,8 @@ section h2 + p {
   section h2 + p {
     text-align: left;
   }
+}
+
+.table {
+  border: solid 1px var(--glay);
 }/*# sourceMappingURL=style.css.map */
