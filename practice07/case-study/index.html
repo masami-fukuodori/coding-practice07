@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Football Game</title>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+	<div class="container">
+		<div class="site">
+			<img src="img/logo.svg" alt="">
+			Football Game
+		</div>
+
+		<button class="navbtn"
+		 onClick="document.querySelector('html').classList.toggle('open')">
+			<span class="navbtn-bar"></span>
+			<span class="sr-only">MENU</span>
+		</button>
+
+		<nav class="nav">
+			<ul class="nav-menu">
+				<li><a href="#">Next Showdown <span>次の対戦</span></a></li>
+				<li><a href="#">Tables & Standings <span>順位表</span></a></li>
+				<li><a href="#">Teams <span>チーム</span></a></li>
+			</ul>
+
+			<ul class="nav-sns">
+				<li><a href="#"><img src="img-sns/logo-twitter.svg" alt="Twitter"></a></li>
+				<li><a href="#"><img src="img-sns/logo-facebook.svg" alt="Facebook"></a></li>
+				<li><a href="#"><img src="img-sns/logo-instagram.svg" alt="Instagram"></a></li>
+				<li><a href="#"><img src="img-sns/logo-youtube.svg" alt="YouTube"></a></li>
+				<li><a href="#"><img src="img-sns/logo-discord.svg" alt="Discord"></a></li>
+				<li><a href="#"><img src="img-sns/logo-twitch.svg" alt="Twitch"></a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<div class="hero">
+	<div class="hero-placeholder"
+	style="background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgYGBggGBggMCAcIDA4KCAgKDhANDQ4NDRARDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/2wBDAQkICAkKCQsJCQsOCw0LDhEODg4OEREMDAwMDBERDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAANABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMBBAUH/8QAKhAAAAUBBgUFAQAAAAAAAAAAAQIDERIABAUTFCEiFTEyQqIjQ1JicqH/xAAXAQADAQAAAAAAAAAAAAAAAAABAwUG/8QAJxEAAQIDBgcBAAAAAAAAAAAAAQIDABExEhMhMjNRBCJSYZGToaL/2gAMAwEAAhEDEQA/AOc3LctrVVTXJeAWSzCAnFYguqWOrYYCG4e3tp6iilrXHPnSvI4qOnaLWQSKCAdihy6qGN95Qqndgr5NLLlEVd+KL8z+y4NoQA8vjS0uISPmgTErmcDOG/8Ausq2AfSECTTlnGoUR3lhSIS2lF1Vp1uZHIBZSvzqfqNPgNvnnuGI4EMTDmnGEovB+nyjuoqHvjJ9Po4fORn5/lqKN8xsqs9P5lhN1xvU1tVen7M0f//Z')"></div>
+	<div class="hero-main" style="background-image: url('img/hero.jpg');"></div>
+
+	<div class="contents container">
+		<figure>
+			<img src="img/field.svg" alt="" width="151" height="245">
+		</figure>
+		<div class="text">
+			<h1>
+				<span class="title01"><span>eSports</span></span>
+				<span class="title02"><span>Football Game</span></span>
+				<span class="title03"><span>2025<img src="img/logo.svg" alt="" width="62" height="62"></span></span>
+			</h1>
+			<p>今年も世界各地で開催されているフットボールゲームのリーグ戦。ここでは対戦予定や結果、順位などのデータと最新情報を配信しています。</p>
+		</div>
+	</div>
+</div>
+
+<main class="container">
+
+	<section class="showdown">
+		<h2>Next Showdown</h2>
+		<p>次の対戦</p>
+
+		<div class="teams">
+			<div class="team home">
+				<img src="img-team/battle-gear.svg" alt="">
+				Battle Gear
+			</div>
+
+			<div class="kickoff">
+				<span class="date">Tomorrow</span>
+				<span class="time">20:00</span>
+				<span class="timezone">SGT (UTC+8)</span>
+			</div>
+
+			<div class="team away">
+				<img src="img-team/mecha-mask.svg" alt="">
+				Mecha Mask
+			</div>
+		</div>
+	</section>
+
+	<section class="standings">
+		<h2>Tables & Standings</h2>
+		<p>順位表</p>
+
+		<div class="table-wrapper">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>順位</th>
+					<th>チーム</th>
+					<th><span>勝点</span></th>
+					<th><span>試合数</span></th>
+					<th><span>勝</span></th>
+					<th><span>分</span></th>
+					<th><span>負</span></th>
+					<th><span>得点</span></th>
+					<th><span>失点</span></th>
+					<th><span>得失点</span></th>
+					<th>直近5試合</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>	
+					<th>1</th>
+					<th>
+						<a href="#">
+							<img src="img-team/all4one.svg" alt="">
+							ALL4ONE
+						</a>
+					</th>
+					<td>31</td>
+					<td>11</td>
+					<td>10</td>
+					<td>1</td>
+					<td>0</td>
+					<td>29</td>
+					<td>7</td>
+					<td>22</td>
+					<td>
+						<img src="img/win.svg" alt="勝ち">
+						<img src="img/win.svg" alt="勝ち">
+						<img src="img/win.svg" alt="勝ち">
+						<img src="img/win.svg" alt="勝ち">
+						<img src="img/win.svg" alt="勝ち">
+					</td>
+				</tr>
+				<tr>
+					<th>2</th>
+					<th>
+						<a href="#">
+							<img src="img-team/battle-gear.svg" alt="">
+							Battle Gear
+						</a>
+					</th>
+					<td>26</td>
+					<td>10</td>
+					<td>8</td>
+					<td>2</td>
+					<td>0</td>
+					<td>13</td>
+					<td>1</td>
+					<td>12</td>
+					<td>
+						<img src="img/win.svg" alt="勝ち">
+						<img src="img/draw.svg" alt="引き分け">
+						<img src="img/draw.svg" alt="引き分け">
+						<img src="img/win.svg" alt="勝ち">
+						<img src="img/win.svg" alt="勝ち">
+					</td>
+				</tr>
+				<tr>
+					<th>3</th>
+					<th>
+						<a href="#">
+							<img src="img-team/elf-helmet.svg" alt="">
+							Elf Warrior
+						</a>
+					</th>
+					<td>18</td>
+					<td>9</td>
+					<td>5</td>
+					<td>3</td>
+					<td>1</td>
+					<td>14</td>
+					<td>9</td>
+					<td>5</td>
+					<td>
+						<img src="img/draw.svg" alt="引き分け">
+						<img src="img/win.svg" alt="勝ち">
+						<img src="img/win.svg" alt="勝ち">
+						<img src="img/win.svg" alt="勝ち">
+						<img src="img/draw.svg" alt="引き分け">
+					</td>
+				</tr>
+				<tr>
+					<th>4</th>
+					<th>
+						<a href="#">
+							<img src="img-team/sea-serpent.svg" alt="">
+							Sea Serpent
+						</a>
+					</th>
+					<td>17</td>
+					<td>10</td>
+					<td>5</td>
+					<td>2</td>
+					<td>3</td>
+					<td>13</td>
+					<td>3</td>
+					<td>10</td>
+					<td>
+						<img src="img/draw.svg" alt="引き分け">
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/win.svg" alt="勝ち">
+						<img src="img/lose.svg" alt="負け">
+					</td>
+				</tr>
+				<tr>
+					<th>5</th>
+					<th>
+						<a href="#">
+							<img src="img-team/chess-queen.svg" alt="">
+							Chess Queen
+						</a>
+					</th>
+					<td>17</td>
+					<td>11</td>
+					<td>5</td>
+					<td>2</td>
+					<td>4</td>
+					<td>17</td>
+					<td>13</td>
+					<td>4</td>
+					<td>
+						<img src="img/draw.svg" alt="引き分け">
+						<img src="img/win.svg" alt="勝ち">
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/draw.svg" alt="引き分け">
+						<img src="img/lose.svg" alt="負け">
+					</td>
+				</tr>
+				<tr>
+					<th>6</th>
+					<th>
+						<a href="#">
+							<img src="img-team/campfire.svg" alt="">
+							CampFire
+						</a>
+					</th>
+					<td>16</td>
+					<td>10</td>
+					<td>4</td>
+					<td>4</td>
+					<td>2</td>
+					<td>14</td>
+					<td>9</td>
+					<td>5</td>
+					<td>
+						<img src="img/win.svg" alt="勝ち">
+						<img src="img/draw.svg" alt="引き分け">
+						<img src="img/win.svg" alt="勝ち">
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/lose.svg" alt="負け">
+					</td>
+				</tr>
+				<tr>
+					<th>7</th>
+					<th>
+						<a href="#">
+							<img src="img-team/mecha-mask.svg" alt="">
+							Mecha Mask
+						</a>
+					</th>
+					<td>15</td>
+					<td>8</td>
+					<td>4</td>
+					<td>3</td>
+					<td>1</td>
+					<td>12</td>
+					<td>7</td>
+					<td>5</td>
+					<td>
+						<img src="img/win.svg" alt="勝ち">
+						<img src="img/win.svg" alt="勝ち">
+						<img src="img/draw.svg" alt="引き分け">
+						<img src="img/win.svg" alt="勝ち">
+						<img src="img/draw.svg" alt="引き分け">
+					</td>
+				</tr>
+				<tr>
+					<th>8</th>
+					<th>
+						<a href="#">
+							<img src="img-team/pharoah.svg" alt="">
+							Pharoah
+						</a>
+					</th>
+					<td>15</td>
+					<td>9</td>
+					<td>4</td>
+					<td>3</td>
+					<td>2</td>
+					<td>16</td>
+					<td>15</td>
+					<td>1</td>
+					<td>
+						<img src="img/win.svg" alt="勝ち">
+						<img src="img/win.svg" alt="勝ち">
+						<img src="img/draw.svg" alt="引き分け">
+						<img src="img/win.svg" alt="勝ち">
+						<img src="img/lose.svg" alt="負け">
+					</td>
+				</tr>
+				<tr>
+					<th>9</th>
+					<th>
+						<a href="#">
+							<img src="img-team/war-axe.svg" alt="">
+							War AXE
+						</a>
+					</th>
+					<td>14</td>
+					<td>10</td>
+					<td>4</td>
+					<td>2</td>
+					<td>4</td>
+					<td>11</td>
+					<td>10</td>
+					<td>1</td>
+					<td>
+						<img src="img/win.svg" alt="勝ち">
+						<img src="img/win.svg" alt="勝ち">
+						<img src="img/win.svg" alt="勝ち">
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/win.svg" alt="勝ち">
+					</td>
+				</tr>
+				<tr>
+					<th>10</th>
+					<th>
+						<a href="#">
+							<img src="img-team/brutal-helmet.svg" alt="">
+							Brutal Helmet
+						</a>
+					</th>
+					<td>14</td>
+					<td>9</td>
+					<td>4</td>
+					<td>2</td>
+					<td>3</td>
+					<td>8</td>
+					<td>12</td>
+					<td>-4</td>
+					<td>
+						<img src="img/draw.svg" alt="引き分け">
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/win.svg" alt="勝ち">
+						<img src="img/win.svg" alt="勝ち">
+						<img src="img/win.svg" alt="勝ち">
+					</td>
+				</tr>
+				<tr>
+					<th>11</th>
+					<th>
+						<a href="#">
+							<img src="img-team/scorpion.svg" alt="">
+							Scorpion
+						</a>
+					</th>
+					<td>10</td>
+					<td>10</td>
+					<td>2</td>
+					<td>4</td>
+					<td>4</td>
+					<td>11</td>
+					<td>15</td>
+					<td>-4</td>
+					<td>
+						<img src="img/draw.svg" alt="引き分け">
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/draw.svg" alt="引き分け">
+						<img src="img/draw.svg" alt="引き分け">
+						<img src="img/lose.svg" alt="負け">
+					</td>
+				</tr>
+				<tr>
+					<th>12</th>
+					<th>
+						<a href="#">
+							<img src="img-team/wind-hole.svg" alt="">
+							Wind Hole
+						</a>
+					</th>
+					<td>9</td>
+					<td>9</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>9</td>
+					<td>11</td>
+					<td>-2</td>
+					<td>
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/draw.svg" alt="引き分け">
+						<img src="img/draw.svg" alt="引き分け">
+						<img src="img/draw.svg" alt="引き分け">
+						<img src="img/win.svg" alt="勝ち">
+					</td>
+				</tr>
+				<tr>
+					<th>13</th>
+					<th>
+						<a href="#">
+							<img src="img-team/colombian-statue.svg" alt="">
+							Colombian Statue
+						</a>
+					</th>
+					<td>9</td>
+					<td>9</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>9</td>
+					<td>13</td>
+					<td>-4</td>
+					<td>
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/win.svg" alt="勝ち">
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/draw.svg" alt="引き分け">
+					</td>
+				</tr>
+				<tr>
+					<th>14</th>
+					<th>
+						<a href="#">
+							<img src="img-team/bull-horns.svg" alt="">
+							Bull Horns
+						</a>
+					</th>
+					<td>8</td>
+					<td>8</td>
+					<td>2</td>
+					<td>2</td>
+					<td>4</td>
+					<td>14</td>
+					<td>13</td>
+					<td>1</td>
+					<td>
+						<img src="img/draw.svg" alt="引き分け">
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/win.svg" alt="勝ち">
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/draw.svg" alt="引き分け">
+					</td>
+				</tr>
+				<tr>
+					<th>15</th>
+					<th>
+						<a href="#">
+							<img src="img-team/metal-boot.svg" alt="">
+							Metal Boot
+						</a>
+					</th>
+					<td>8</td>
+					<td>8</td>
+					<td>2</td>
+					<td>2</td>
+					<td>4</td>
+					<td>10</td>
+					<td>12</td>
+					<td>-2</td>
+					<td>
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/win.svg" alt="勝ち">
+						<img src="img/draw.svg" alt="引き分け">
+					</td>
+				</tr>
+				<tr>
+					<th>16</th>
+					<th>
+						<a href="#">
+							<img src="img-team/snake-totem.svg" alt="">
+							Snake Totem
+						</a>
+					</th>
+					<td>7</td>
+					<td>9</td>
+					<td>2</td>
+					<td>1</td>
+					<td>6</td>
+					<td>6</td>
+					<td>12</td>
+					<td>-6</td>
+					<td>
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/draw.svg" alt="引き分け">
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/win.svg" alt="勝ち">
+					</td>
+				</tr>
+				<tr>
+					<th>17</th>
+					<th>
+						<a href="#">
+							<img src="img-team/volcano.svg" alt="">
+							Volcano
+						</a>
+					</th>
+					<td>5</td>
+					<td>5</td>
+					<td>1</td>
+					<td>2</td>
+					<td>2</td>
+					<td>1</td>
+					<td>2</td>
+					<td>-1</td>
+					<td>
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/draw.svg" alt="引き分け">
+						<img src="img/draw.svg" alt="引き分け">
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/win.svg" alt="勝ち">
+					</td>
+				</tr>
+				<tr>
+					<th>18</th>
+					<th>
+						<a href="#">
+							<img src="img-team/magic-trident.svg" alt="">
+							Magic Trident
+						</a>
+					</th>
+					<td>5</td>
+					<td>8</td>
+					<td>1</td>
+					<td>2</td>
+					<td>5</td>
+					<td>5</td>
+					<td>13</td>
+					<td>-8</td>
+					<td>
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/lose.svg" alt="負け">
+					</td>
+				</tr>
+				<tr>
+					<th>19</th>
+					<th>
+						<a href="#">
+							<img src="img-team/laurel-crown.svg" alt="">
+							Laurel Crown
+						</a>
+					</th>
+					<td>2</td>
+					<td>8</td>
+					<td>0</td>
+					<td>2</td>
+					<td>6</td>
+					<td>4</td>
+					<td>19</td>
+					<td>-15</td>
+					<td>
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/draw.svg" alt="引き分け">
+					</td>
+				</tr>
+				<tr>
+					<th>20</th>
+					<th>
+						<a href="#">
+							<img src="img-team/horned-armor.svg" alt="">
+							Horned Armor
+						</a>
+					</th>
+					<td>1</td>
+					<td>9</td>
+					<td>0</td>
+					<td>1</td>
+					<td>8</td>
+					<td>5</td>
+					<td>25</td>
+					<td>-20</td>
+					<td>
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/draw.svg" alt="引き分け">
+						<img src="img/lose.svg" alt="負け">
+						<img src="img/lose.svg" alt="負け">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+	</section>
+</main>
+
+<footer class="footer container">
+	<nav class="menus">
+		<div class="menu-text">
+			<h3>EVENTS</h3>
+			<ul>
+				<li><a href="#">リーグ</a></li>
+				<li><a href="#">ウィンターカップ</a></li>
+				<li><a href="#">リージョンステージ</a></li>
+				<li><a href="#">ワールドファイナル</a></li>
+			</ul>
+		</div>
+		<div class="menu-text">
+			<h3>ABOUT</h3>
+			<ul>
+				<li><a href="#">プロジェクト</a></li>
+				<li><a href="#">スポンサー</a></li>
+				<li><a href="#">チーム</a></li>
+			</ul>
+		</div>
+		<div class="menu-text">
+			<h3>REGION</h3>
+			<ul>
+				<li><a href="#">東京</a></li>
+				<li><a href="#">アジア</a></li>
+				<li><a href="#">アメリカ</a></li>
+				<li><a href="#">ヨーロッパ</a></li>
+			</ul>
+		</div>
+		<div class="menu-sns">
+			<h3>JOIN</h3>
+			<ul>
+				<li><a href="#"><img src="img-sns/logo-twitter.svg" alt="Twitter"></a></li>
+				<li><a href="#"><img src="img-sns/logo-facebook.svg" alt="Facebook"></a></li>
+				<li><a href="#"><img src="img-sns/logo-instagram.svg" alt="Instagram"></a></li>
+				<li><a href="#"><img src="img-sns/logo-youtube.svg" alt="YouTube"></a></li>
+				<li><a href="#"><img src="img-sns/logo-discord.svg" alt="Discord"></a></li>
+				<li><a href="#"><img src="img-sns/logo-twitch.svg" alt="Twitch"></a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="attribution">
+		<div>
+			<div class="site">
+				<img src="img/logo.svg" alt="">
+				Football Game
+			</div>
+			<div class="copyright">@ Football Game</div>
+		</div>
+		<div class="teamlogo">
+			The icons used as the team logo made by Skoll, <br>
+			Delapouite, Kier Heyl, Lorc, Carl Olsen. Available <br>
+			on <a href="https://game-icons.net">https://game-icons.net</a>
+		</div>
+	</div>
+
+	<img src="img/logo.svg" alt="" class="footer-deco">
+</footer>
+
+</body>
+</html>
