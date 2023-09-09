@@ -13,6 +13,10 @@ a {
   color: inherit;
 }
 
+li {
+  list-style: none;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background: transparent linear-gradient(180deg, #3a0757 0%, #3a0757 28%, #042230 100%) 0% 0% no-repeat padding-box;
@@ -66,15 +70,21 @@ section h2 + p {
   width: 100%;
   table-layout: fixed;
   border-spacing: 0;
-  margin-top: 28px;
   font-size: 14px;
   color: var(--black);
+  min-width: 550px;
 }
 .table th,
 .table td {
   border-bottom: solid 1px var(--glay);
   padding: 5px;
   text-align: center;
+}
+@media (max-width: 899px) {
+  .table th,
+  .table td {
+    font-size: 13px;
+  }
 }
 .table th:nth-child(1) {
   width: 42px;
@@ -83,12 +93,25 @@ section h2 + p {
 }
 .table th:nth-child(2) {
   width: 150px;
+  padding-right: 10px;
+  box-sizing: border-box;
   background-color: var(--black);
   color: var(--white);
   box-shadow: 4px 0 4px rgba(0, 0, 0, 0.2);
 }
+@media (max-width: 899px) {
+  .table th:nth-child(2) {
+    width: 120px;
+  }
+}
 .table th:last-child {
   width: 150px;
+}
+@media (max-width: 899px) {
+  .table thead span {
+    writing-mode: vertical-rl;
+    height: 48px;
+  }
 }
 .table tbody th:nth-child(1) {
   font-weight: normal;
@@ -112,4 +135,191 @@ section h2 + p {
   width: 16px;
   height: auto;
   margin: 0 2px 0;
+}
+
+.table-wrapper {
+  overflow: auto;
+  margin-top: 28px;
+}
+
+.table th:nth-child(1) {
+  -webkit-position: sticky;
+  position: sticky;
+  left: 0;
+}
+.table th:nth-child(2) {
+  -webkit-position: sticky;
+  position: sticky;
+  left: 42px;
+}
+
+.teams {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 45px;
+  gap: 10px;
+}
+@media (min-width: 768px) {
+  .teams {
+    margin-top: 23px;
+    background-image: url(../img/logo-blue.svg);
+    background-size: 38px;
+    background-position: left center;
+    padding: 0 50px;
+  }
+}
+
+.team {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-self: flex-start;
+  align-items: center;
+  color: #0b5578;
+  font-size: 16px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .team {
+    font-size: 24px;
+    margin: 0;
+  }
+  .team br {
+    display: none;
+  }
+  .team.home {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+  .team.home img {
+    margin: 0 9.3% 0 7.3%;
+  }
+  .team.away {
+    flex-direction: row;
+    text-align: left;
+  }
+  .team.away img {
+    margin: 0 7.3% 0 9.3%;
+  }
+}
+@media (min-width: 1100px) {
+  .team {
+    font-size: 24px;
+  }
+}
+.team img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 8px;
+  padding: 7px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: var(--blue-main);
+}
+@media (min-width: 1100px) {
+  .team img {
+    width: 169px;
+    height: 169px;
+    padding: 13px;
+  }
+}
+
+.kickoff {
+  display: flex;
+  flex-direction: column;
+  color: var(--black);
+  text-align: center;
+}
+.kickoff .date {
+  font-size: 11px;
+  font-weight: 900;
+}
+@media (min-width: 1100px) {
+  .kickoff .date {
+    font-size: 15px;
+  }
+}
+.kickoff .time {
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-weight: 900;
+}
+@media (min-width: 1100px) {
+  .kickoff .time {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+}
+.kickoff .timezone {
+  font-size: 10px;
+}
+@media (min-width: 1100px) {
+  .kickoff .timezone {
+    font-size: 16px;
+  }
+}
+
+.footer {
+  margin: 80px 14px;
+}
+@media (min-width: 768px) {
+  .footer {
+    margin: 120px 78px 107px;
+  }
+}
+
+nav.menus {
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  nav.menus {
+    flex-wrap: nowrap;
+  }
+}
+nav.menus h3 {
+  font-size: 16px;
+  font-weight: 900;
+}
+nav.menus ul {
+  margin-top: 30px;
+  margin-right: 10px;
+  font-size: 13px;
+  opacity: 0.8;
+}
+nav.menus ul li:not(:last-child) {
+  margin-bottom: 12px;
+}
+@media (min-width: 768px) {
+  nav.menus ul {
+    font-size: 16px;
+  }
+  nav.menus ul li:not(:last-child) {
+    margin-bottom: 7px;
+  }
+}
+nav.menus .menu-text,
+nav.menus .menu-sns {
+  width: 50%;
+  margin-bottom: 60px;
+}
+nav.menus .menu-sns ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: -20px;
+}
+nav.menus .menu-sns ul li img {
+  width: 35px;
+  height: auto;
+  margin-right: 33px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+@media (min-width: 768px) {
+  nav.menus .menu-sns ul li {
+    width: 33%;
+  }
 }/*# sourceMappingURL=style.css.map */

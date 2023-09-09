@@ -13,6 +13,10 @@ a {
   color: inherit;
 }
 
+li {
+  list-style: none;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background: transparent
@@ -63,15 +67,18 @@ section {
   width: 100%;
   table-layout: fixed;
   border-spacing: 0;
-  margin-top: 28px;
   font-size: 14px;
   color: var(--black);
+  min-width: 550px;
 
   th,
   td {
     border-bottom: solid 1px var(--glay);
     padding: 5px;
     text-align: center;
+    @media (max-width: 899px) {
+      font-size: 13px;
+    }
   }
 
   th:nth-child(1) {
@@ -81,12 +88,26 @@ section {
   }
   th:nth-child(2) {
     width: 150px;
+    padding-right: 10px;
+    box-sizing: border-box;
     background-color: var(--black);
     color: var(--white);
     box-shadow: 4px 0 4px rgba(0, 0, 0, 0.2);
+    @media (max-width: 899px) {
+      width: 120px;
+    }
   }
   th:last-child {
     width: 150px;
+  }
+
+  thead {
+    span {
+      @media (max-width: 899px) {
+        writing-mode: vertical-rl;
+        height: 48px;
+      }
+    }
   }
 
   tbody {
@@ -95,6 +116,8 @@ section {
     }
     th:nth-child(2) {
       text-align: left;
+      @media (min-width: 899px) {
+      }
 
       a {
         display: flex;
@@ -114,6 +137,196 @@ section {
         width: 16px;
         height: auto;
         margin: 0 2px 0;
+      }
+    }
+  }
+}
+
+// レスポンシブテーブル
+.table-wrapper {
+  overflow: auto;
+  margin-top: 28px;
+}
+
+.table {
+  th:nth-child(1) {
+    -webkit-position: sticky;
+    position: sticky;
+    left: 0;
+  }
+  th:nth-child(2) {
+    -webkit-position: sticky;
+    position: sticky;
+    left: 42px;
+  }
+}
+
+// 対戦カード
+.teams {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 45px;
+  gap: 10px;
+
+  @media (min-width: 768px) {
+    margin-top: 23px;
+    background-image: url(../img/logo-blue.svg);
+    background-size: 38px;
+    background-position: left center;
+    padding: 0 50px;
+  }
+}
+
+.team {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-self: flex-start;
+  align-items: center;
+  color: #0b5578;
+  font-size: 16px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+    margin: 0;
+
+    br {
+      display: none;
+    }
+
+    &.home {
+      flex-direction: row-reverse;
+      text-align: right;
+
+      img {
+        margin: 0 9.3% 0 7.3%;
+      }
+    }
+    &.away {
+      flex-direction: row;
+      text-align: left;
+      img {
+        margin: 0 7.3% 0 9.3%;
+      }
+    }
+  }
+  @media (min-width: 1100px) {
+    font-size: 24px;
+  }
+
+  img {
+    width: 84px;
+    height: 84px;
+    margin-bottom: 8px;
+    padding: 7px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: var(--blue-main);
+    @media (min-width: 1100px) {
+      width: 169px;
+      height: 169px;
+      padding: 13px;
+    }
+  }
+}
+
+.kickoff {
+  display: flex;
+  flex-direction: column;
+  color: var(--black);
+  text-align: center;
+
+  .date {
+    font-size: 11px;
+    font-weight: 900;
+    @media (min-width: 1100px) {
+      font-size: 15px;
+    }
+  }
+  .time {
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: 900;
+    @media (min-width: 1100px) {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+  }
+  .timezone {
+    font-size: 10px;
+    @media (min-width: 1100px) {
+      font-size: 16px;
+    }
+  }
+}
+
+// フッタ－
+.footer {
+  margin: 80px 14px;
+
+  @media (min-width: 768px) {
+    margin: 120px 78px 107px;
+  }
+}
+
+nav.menus {
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: 768px) {
+    flex-wrap: nowrap;
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 900;
+  }
+
+  ul {
+    margin-top: 30px;
+    margin-right: 10px;
+    font-size: 13px;
+    opacity: 0.8;
+
+    li:not(:last-child) {
+      margin-bottom: 12px;
+    }
+    @media (min-width: 768px) {
+      font-size: 16px;
+      li:not(:last-child) {
+        margin-bottom: 7px;
+      }
+    }
+  }
+
+  .menu-text,
+  .menu-sns {
+    width: 50%;
+    margin-bottom: 60px;
+  }
+
+  .menu-sns ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: -20px;
+
+    li {
+      img {
+        width: 35px;
+        height: auto;
+        margin-right: 33px;
+        margin-bottom: 20px;
+        opacity: 0.8;
+      }
+    }
+
+    @media (min-width: 768px) {
+      li {
+        width: 33%;
       }
     }
   }
