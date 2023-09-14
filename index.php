@@ -14,6 +14,67 @@
 </head>
 
 <body>
+
+    <header class="header">
+        <div class="container">
+            <div class="site">
+                <img src="img/logo.svg" alt="">
+                football Game
+            </div>
+
+            <button class="navbtn" onclick="document.querySelector('html').classList.toggle('open')">
+                <span class="navbtn-bar"></span>
+                <span class="sr-only">
+                    NENU
+                </span>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="#">Next Showdown<span>次の対戦</span></a></li>
+                    <li><a href="#">Tables & Standings<span>順位表</span></a></li>
+                    <li><a href="#">Team<span>チーム</span></a></li>
+                </ul>
+                <ul class="nav-sns">
+                    <li><a href="#"><img src="img-sns/logo-twitter.svg" alt="Twitter"></a></li>
+                    <li><a href="#"><img src="img-sns/logo-facebook.svg" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="img-sns/logo-instagram.svg" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="img-sns/logo-youtube.svg" alt="Youtube"></a></li>
+                    <li><a href="#"><img src="img-sns/logo-discord.svg" alt="Discord"></a></li>
+                    <li><a href="#"><img src="img-sns/logo-twitch.svg" alt="Twitch"></a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-placeholder"
+            style="background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgYGBggGBggMCAcIDA4KCAgKDhANDQ4NDRARDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/2wBDAQkICAkKCQsJCQsOCw0LDhEODg4OEREMDAwMDBERDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAANABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMBBAUH/8QAKhAAAAUBBgUFAQAAAAAAAAAAAQIDERIABAUTFCEiFTEyQqIjQ1JicqH/xAAXAQADAQAAAAAAAAAAAAAAAAABAwUG/8QAJxEAAQIDBgcBAAAAAAAAAAAAAQIDABExEhMhMjNRBCJSYZGToaL/2gAMAwEAAhEDEQA/AOc3LctrVVTXJeAWSzCAnFYguqWOrYYCG4e3tp6iilrXHPnSvI4qOnaLWQSKCAdihy6qGN95Qqndgr5NLLlEVd+KL8z+y4NoQA8vjS0uISPmgTErmcDOG/8Ausq2AfSECTTlnGoUR3lhSIS2lF1Vp1uZHIBZSvzqfqNPgNvnnuGI4EMTDmnGEovB+nyjuoqHvjJ9Po4fORn5/lqKN8xsqs9P5lhN1xvU1tVen7M0f//Z');">
+        </div>
+
+        <div class="hero-main" style="background-image: url('img/hero.jpg');">
+        </div>
+
+        <div class="contents container">
+
+            <figure>
+                <img src="img/field.svg" alt="" width="151" height="245">
+            </figure>
+            <div class="text">
+                <h1>
+                    <span class="title01"><span>eSports</span></span>
+                    <span class="title02"><span>Football Game</span></span>
+                    <span class="title03"><span>2025<img src="img/logo.svg" alt="" width="62" height="62"></span></span>
+                </h1>
+                <p>
+                    今年も世界各地で開催されているフットボールゲームのリーグ戦。ここでは対戦予定や結果、順位などのデータと最新情報を配信しています。
+                </p>
+
+            </div>
+        </div>
+    </div>
+
     <main class="container">
         <section class="showdown">
             <h2>Next Showdown</h2>
